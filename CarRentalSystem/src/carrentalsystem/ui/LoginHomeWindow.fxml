@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carrentalsystem.ui.LoginHomeWindowController">
+   <children>
+      <Pane layoutX="-1.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F2F1C4;">
+         <children>
+            <Label layoutX="207.0" layoutY="34.0" text="Login Home ">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Button layoutX="44.0" layoutY="160.0" mnemonicParsing="false" onAction="#redirectToDirectorLoginWindow" prefHeight="99.0" prefWidth="151.0" style="-fx-background-color: #59FF00;" text="Director" textFill="#030303">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button layoutX="230.0" layoutY="160.0" mnemonicParsing="false" onAction="#redirectToStaffLoginWindow" prefHeight="99.0" prefWidth="151.0" style="-fx-background-color: #59FF00;" text="Staff" textFill="#030303">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button layoutX="417.0" layoutY="160.0" mnemonicParsing="false" onAction="#redirectToCustomerLoginWindow" prefHeight="99.0" prefWidth="151.0" style="-fx-background-color: #59FF00;" text="Customer" textFill="#030303">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Label layoutX="190.0" layoutY="283.0" onMouseClicked="#redirectToRegisterHomeWindow" text="Go to Register Home Winddow" textFill="#2312ff" underline="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

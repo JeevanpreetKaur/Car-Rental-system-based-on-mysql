@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carrentalsystem.ui.CustomerHomeWindowController">
+   <children>
+      <Pane prefHeight="550.0" prefWidth="600.0" style="-fx-background-color: #F2F1C4;">
+         <children>
+            <Label layoutX="185.0" layoutY="15.0" text="Customer Home">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <TabPane layoutX="14.0" layoutY="65.0" prefHeight="479.0" prefWidth="579.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Car Booking">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="445.0" prefWidth="579.0">
+                           <children>
+                              <Pane layoutX="-1.0" prefHeight="460.0" prefWidth="579.0">
+                                 <children>
+                                    <TableView fx:id="tblCars" layoutX="13.0" layoutY="14.0" onMouseClicked="#tblMouseClicked" prefHeight="331.0" prefWidth="558.0" />
+                                    <Button layoutX="185.0" layoutY="411.0" mnemonicParsing="false" onAction="#btnBookClicked" prefHeight="25.0" prefWidth="224.0" style="-fx-background-color: #59FF00;" text="Book Car" />
+                                    <Label fx:id="lblError" layoutX="21.0" layoutY="387.0" prefHeight="17.0" prefWidth="538.0" text=" " textAlignment="CENTER" textFill="RED" />
+                                    <DatePicker fx:id="txtBookingDate" layoutX="21.0" layoutY="354.0" promptText="Booking Date" />
+                                    <TextField fx:id="txtFrom" layoutX="223.0" layoutY="354.0" promptText="From Time (24 hr format)" />
+                                    <TextField fx:id="txtTo" layoutX="398.0" layoutY="354.0" promptText="To Time (24 hr format)" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#onBookingTabSelectionChanged" text="Booking History">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="3.0" layoutY="5.0" prefHeight="438.0" prefWidth="569.0">
+                                 <children>
+                                    <TableView fx:id="tblBookingHistory" layoutX="12.0" layoutY="46.0" onMouseClicked="#tblMouseClicked" prefHeight="352.0" prefWidth="547.0" />
+                                    <Label layoutX="221.0" layoutY="14.0" text="Booking History">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Button layoutX="447.0" layoutY="15.0" mnemonicParsing="false" onAction="#btnRefreshButtonClicked" prefHeight="25.0" prefWidth="106.0" style="-fx-background-color: #84C4F5;" text="Refresh" />
+                                    <Label fx:id="lblHistoryError" layoutX="14.0" layoutY="407.0" prefHeight="17.0" prefWidth="546.0" text=" " textFill="RED" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Feedback">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutX="6.0" layoutY="8.0" prefHeight="437.0" prefWidth="567.0">
+                                 <children>
+                                    <Label layoutX="198.0" layoutY="14.0" text="Feedback Form">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtOverallRating" layoutX="125.0" layoutY="81.0" prefHeight="25.0" prefWidth="300.0" promptText="Overall Rating (1-10)" />
+                                    <TextField fx:id="txtCarCondition" layoutX="125.0" layoutY="129.0" prefHeight="25.0" prefWidth="300.0" promptText="Car Condition ( 1-10 )" />
+                                    <TextField fx:id="txtFeedback" layoutX="125.0" layoutY="177.0" prefHeight="25.0" prefWidth="300.0" promptText="Feedback" />
+                                    <Button layoutX="212.0" layoutY="238.0" mnemonicParsing="false" onAction="#btnFeedbackClicked" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #59FF00;" text="Submit Feedback" />
+                                    <Label fx:id="lblFeedbackError" contentDisplay="TOP" layoutX="8.0" layoutY="210.0" prefHeight="17.0" prefWidth="538.0" textFill="RED" />
+                                    <Label layoutX="182.0" layoutY="49.0" text="Please give us your valuable feedback!" />
+                                    <TableView fx:id="tblFeedback" layoutX="7.0" layoutY="290.0" prefHeight="119.0" prefWidth="550.0" />
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab onSelectionChanged="#onTabSelectionChanged" text="Edit Profile">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Pane layoutY="2.0" prefHeight="446.0" prefWidth="579.0">
+                                 <children>
+                                    <Label layoutX="227.0" layoutY="25.0" text="Edit Profile">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="69.0" layoutY="75.0" text="Id" />
+                                    <Label layoutX="66.0" layoutY="108.0" text="First Name" />
+                                    <Label layoutX="63.0" layoutY="139.0" text="Last Name" />
+                                    <Label layoutX="61.0" layoutY="171.0" text="Contact Number" />
+                                    <Label layoutX="63.0" layoutY="203.0" text="Email Id" />
+                                    <Label layoutX="61.0" layoutY="235.0" text="Street" />
+                                    <Label layoutX="63.0" layoutY="266.0" text="City" />
+                                    <Label layoutX="58.0" layoutY="297.0" text="Province" />
+                                    <Label layoutX="59.0" layoutY="330.0" prefHeight="17.0" prefWidth="58.0" text="Zip Code" />
+                                    <Label layoutX="58.0" layoutY="363.0" text="Password" />
+                                    <TextField fx:id="txtEditId" editable="false" layoutX="163.0" layoutY="67.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <TextField fx:id="txtEditFN" layoutX="163.0" layoutY="100.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <TextField fx:id="txtEditLN" layoutX="163.0" layoutY="131.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <TextField fx:id="txtEditCN" layoutX="163.0" layoutY="163.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <TextField fx:id="txtEditEmail" layoutX="163.0" layoutY="195.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <TextField fx:id="txtEditStreet" layoutX="163.0" layoutY="227.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <TextField fx:id="txtEditCity" layoutX="163.0" layoutY="258.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <TextField fx:id="txtEditProvince" layoutX="163.0" layoutY="289.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <TextField fx:id="txtEditZip" layoutX="163.0" layoutY="322.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <TextField fx:id="txtEditPwd" layoutX="163.0" layoutY="355.0" prefHeight="25.0" prefWidth="317.0" />
+                                    <Button layoutX="213.0" layoutY="407.0" mnemonicParsing="false" onAction="#btnEditUpdateRecords" prefHeight="25.0" prefWidth="142.0" style="-fx-background-color: #84C4F5;" text="Update" />
+                                    <Label fx:id="lblEditError" layoutX="20.0" layoutY="383.0" prefHeight="17.0" prefWidth="551.0" text=" " textFill="RED" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <Button layoutX="514.0" layoutY="25.0" mnemonicParsing="false" onAction="#btnLogoutClicked" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: red;" text="Logout" />
+            <Label fx:id="lblCustomerId" layoutX="14.0" layoutY="30.0" text=" " />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carrentalsystem.ui.RegisterWindowController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F2F1C4;">
+         <children>
+            <Label layoutX="175.0" layoutY="14.0" text="Register Window">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Label layoutX="190.0" layoutY="361.0" onMouseClicked="#redirectToHomeWindow" text="Go to Register Home Window" textFill="#2312ff" underline="true">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFN" layoutX="94.0" layoutY="86.0" prefHeight="25.0" prefWidth="184.0" promptText="First Name" />
+            <TextField fx:id="txtLN" layoutX="341.0" layoutY="86.0" prefHeight="25.0" prefWidth="184.0" promptText="Last Name" />
+            <TextField fx:id="txtCN" layoutX="94.0" layoutY="123.0" prefHeight="25.0" prefWidth="184.0" promptText="Contact Number" />
+            <TextField fx:id="txtEmail" layoutX="341.0" layoutY="123.0" prefHeight="25.0" prefWidth="184.0" promptText="Email Id" />
+            <TextField fx:id="txtStreet" layoutX="94.0" layoutY="167.0" prefHeight="25.0" prefWidth="184.0" promptText="Street" />
+            <TextField fx:id="txtCity" layoutX="341.0" layoutY="167.0" prefHeight="25.0" prefWidth="184.0" promptText="City" />
+            <TextField fx:id="txtProvince" layoutX="94.0" layoutY="207.0" prefHeight="25.0" prefWidth="184.0" promptText="Province" />
+            <TextField fx:id="txtZC" layoutX="341.0" layoutY="207.0" prefHeight="25.0" prefWidth="184.0" promptText="Zip Code" />
+            <TextField fx:id="txtPwd" layoutX="94.0" layoutY="247.0" prefHeight="25.0" prefWidth="184.0" promptText="Password" />
+            <TextField fx:id="txtCPwd" layoutX="341.0" layoutY="247.0" prefHeight="25.0" prefWidth="184.0" promptText="Confirm Password" />
+            <TextField fx:id="txtSecretKey" layoutX="94.0" layoutY="285.0" prefHeight="25.0" prefWidth="184.0" promptText="Secret Key" />
+            <Button fx:id="btnRegister" layoutX="217.0" layoutY="331.0" mnemonicParsing="false" onAction="#btnRegisterClicked" prefHeight="25.0" prefWidth="166.0" style="-fx-background-color: #59FF00;" text="Register">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblError" alignment="CENTER" layoutX="92.0" layoutY="310.0" prefHeight="17.0" prefWidth="466.0" text=" " textFill="RED" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
